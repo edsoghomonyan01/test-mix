@@ -30652,6 +30652,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 // import ExampleComponent from './components/ExampleComponent.vue';
 
+var greeting = function greeting() {
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./components/greeting */ "./resources/js/components/greeting.vue"));
+};
+
 var ExampleComponent = function ExampleComponent() {
   return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue"));
 };
@@ -30659,7 +30663,26 @@ var ExampleComponent = function ExampleComponent() {
 var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#app',
   components: {
+    'greeting': greeting,
     'example-component': ExampleComponent
+  },
+  data: {
+    phone_number: ''
+  },
+  computed: {
+    phoneNumber: {
+      get: function get() {
+        var value = this.phone_number;
+        value = value.replace(/^\+1/, '');
+        value = value.replace(/^(\d{3})(\d)/g, '($1) $2');
+        value = value.replace(/^(\(\d{3}\)\s)(\d{3})(\d)/, '$1$2-$3');
+        value = value.replace(/^(\(\d{3}\)\s)(\d{3})-(\d{4})/, '$1$2-$3');
+        return value;
+      },
+      set: function set(value) {
+        if (value.length <= 14) this.phone_number = value;
+      }
+    }
   }
 });
 
@@ -30676,15 +30699,63 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 
 /***/ }),
 
+/***/ "./resources/sass/pages/expired-deal.scss":
+/*!************************************************!*\
+  !*** ./resources/sass/pages/expired-deal.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/pages/onboarding.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/pages/onboarding.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/pages/press-release.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/pages/press-release.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/styles.scss":
+/*!************************************!*\
+  !*** ./resources/sass/styles.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/pages/expired-deal.scss ./resources/sass/pages/onboarding.scss ./resources/sass/pages/press-release.scss ./resources/sass/app.scss ./resources/sass/styles.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\pages\expired-deal.scss */"./resources/sass/pages/expired-deal.scss");
+__webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\pages\onboarding.scss */"./resources/sass/pages/onboarding.scss");
+__webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\pages\press-release.scss */"./resources/sass/pages/press-release.scss");
+__webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp-2\htdocs\test-mix\resources\sass\styles.scss */"./resources/sass/styles.scss");
 
 
 /***/ })

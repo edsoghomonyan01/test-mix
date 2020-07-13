@@ -1,0 +1,426 @@
+$brand-green: #67B6B3;
+$scholarship-info-headline: #777777;
+$label-border: #439795;
+
+$brand-colors: (
+    "primary-green": #2F706B,
+    "secondary-green": #278D87,
+    "off-black": #3F3356,
+    "accent-pink": #FFE1E7,
+    "tertiary-green": #2F706B,
+    "primary-black": #222222,
+    "primary-off-white": #E0FFFE,
+    "secondary-off-white": #ECF3F3,
+    "white": #ffffff,
+    "alt-white": #F9FAFF,
+    "translucent-green": #EDF6F5,
+    "gray-one": #F6FAF9,
+    "alternate-grey": #92A5A4,
+);
+
+$theme-colors: (
+    "primary"       : map_get($brand-colors,"primary-green"),
+    "secondary"     : map_get($brand-colors,"accent-pink"),
+    "brand-green"   : $brand-green,
+);
+
+$theme-colors: map_merge($brand-colors, $theme-colors);
+
+@font-face{
+    font-family: 'CooperMediumBT';
+    src:            url('/fonts/CooperMedium.ttf');
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraBold-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 900;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraBold-Oblique.ttf');
+    font-style: italic;
+    font-weight: 900;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraBold.ttf');
+    font-weight: 900;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBlack-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 800;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBlack-Oblique.ttf');
+    font-style: italic;
+    font-weight: 800;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBlack.ttf');
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBold-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBold-Oblique.ttf');
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProBold.ttf');
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProMedium-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 600;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProMedium-Oblique.ttf');
+    font-style: italic;
+    font-weight: 600;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProMedium.ttf');
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProRegular-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProRegular-Oblique.ttf');
+    font-style: italic;
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProRegular.ttf');
+    font-weight: 500;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProLight-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProLight-Oblique.ttf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProLight.ttf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProThin-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProThin-Oblique.ttf');
+    font-style: italic;
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProThin.ttf');
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraLight-Oblique.ttf');
+    font-style: oblique;
+    font-weight: 200;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraLight-Oblique.ttf');
+    font-style: italic;
+    font-weight: 200;
+}
+@font-face{
+    font-family: 'GTWalsheimPro';
+    src: url('/fonts/GTWalsheimProUltraLight.ttf');
+    font-weight: 200;
+}
+$font-family-base: "GTWalsheimPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base: 1.15rem;
+
+$link-color:                              #2A7CBD;
+$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-decoration:                   underline !default;
+
+
+
+$fa-font-path: "/webfonts";
+// @import "~@fortawesome/fontawesome-pro/scss/fontawesome";
+// @import "~@fortawesome/fontawesome-pro/scss/brands";
+// @import "~@fortawesome/fontawesome-pro/scss/duotone";
+// @import "~@fortawesome/fontawesome-pro/scss/light";
+// @import "~@fortawesome/fontawesome-pro/scss/regular";
+// @import "~@fortawesome/fontawesome-pro/scss/solid";
+
+@import "~bootstrap/scss/bootstrap";
+// @import "~select2/dist/css/select2.css";
+
+@each $name, $color in $theme-colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+@each $name, $color in $theme-colors {
+    .#{$name} {
+        color: $color;
+    }
+}
+
+@each $name, $color in $theme-colors {
+    .border-#{$name} {
+        border-color: $color;
+    }
+}
+
+.pill-radius{
+    border-radius: 40px;
+}
+
+h1, h2{
+    font-family: "CooperMediumBT";
+    color: #488C89;
+}
+h2.sub-heading{
+    font-family: $font-family-base;
+    color: black;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+h2.section-title{
+    font-family: "GTWalsheimPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 20px;
+    color: #000000;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    h2.section-title{
+        font-size: 22px;
+    }
+}
+
+section.hero h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.25rem;
+}
+
+@media (min-width: 576px) {
+    section.hero h1{
+        font-size: 3.5rem;
+    }
+}
+@media (min-width: 768px) {
+    section.hero h1{
+        font-size: 3.5rem;
+    }
+    h2.sub-heading{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 992px) {
+    section.hero h1{
+        font-size: 3.5rem;
+    }
+}
+
+h3, h4{
+    font-weight: 400;
+}
+h2.section-header{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: $font-family-base;
+    color: black;
+    font-weight: 500;
+}
+.btn{
+    font-weight: 500;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.btn-link {
+    color: map_get($brand-colors,"secondary-green");
+}
+hr.below-section-header{
+    margin-top: 0;
+    border-top: 2px solid #000000;
+    width: 100px;
+}
+.features h2.feature-header{
+    font-size: 1.75rem;
+}
+.features p{
+    font-size: 18px;
+    color: black;
+}
+.features .col-md-4{
+    min-height: 320px;
+    padding-top: 111px;
+}
+
+.vertically-padded-table th,
+.vertically-padded-table td{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.green-background{
+    background-color: #67B6B3;
+}
+.light-green-background{
+    background-color: #97C4BE;
+}
+.split-background-70{
+    background-image: linear-gradient(to top, #67B6B3 70%, white 30%);
+}
+.split-background-50{
+    background-image: linear-gradient(to top, #67B6B3 50%, white 50%);
+}
+.bg-grey{
+    background-color: #F7F7F5;
+}
+
+.bg-1{
+    background-color: #F3F3F3;
+}
+.bg-2{
+    background-color: #ffffff;;
+}
+.bg-3{
+    background-color: #67B6B3;
+}
+label{
+    font-weight: 500;
+}
+section{
+    padding: 60px 0;
+}
+
+
+
+.fw-100{
+    font-weight: 100;
+}
+.fw-200{
+    font-weight: 200;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+
+
+#footer{
+    background-color: map_get($brand-colors,"secondary-green");
+}
+#footer h1, #footer h2{
+    color: white;
+}
+#footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#footer li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+#footer a{
+    color: #FFE1E7;
+}
+
+#footer hr{
+    margin:0;
+}
+
+#footer .text-footer-disclaimer{
+    color: white;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#safeApp {
+    padding-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    #footer, nav.navbar, main {
+        flex-shrink: 0;
+    }
+    main {
+        flex-grow: 1;
+    }
+}

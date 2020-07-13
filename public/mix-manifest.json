@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/mix/css/pages/expired-deal.css": "/mix/css/pages/expired-deal.css",
+    "/mix/css/pages/onboarding.css": "/mix/css/pages/onboarding.css",
+    "/mix/css/pages/press-release.css": "/mix/css/pages/press-release.css",
+    "/css/app.css": "/css/app.css",
+    "/mix/css/styles.css": "/mix/css/styles.css"
 }
